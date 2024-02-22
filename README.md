@@ -7,6 +7,7 @@ Details for installation here: https://pypi.org/project/Flask-HTTPAuth/
 
 To execute app.py:
 -From admin-enabled powershell terminal: 
+	-Navigate to src subfolder
 	-".venv\Scripts\activate"
 	-"Flask run"
 	
