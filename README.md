@@ -15,3 +15,5 @@ To execute test.py:
 -Ensure that app.py is running
 -From admin-enabled powershell terminal: 
 	-"python test.py"
+	
+![UML Diagram](image/UML_Sequence.png)

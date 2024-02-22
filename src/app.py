@@ -8,6 +8,8 @@ auth = HTTPBasicAuth()
 # Hash authentication performed using SCRYPT - modern hashing algorithm
 # Details here: https://werkzeug.palletsprojects.com/en/2.3.x/utils/#module-werkzeug.security
 # stores result to be compared against check_password_hash
+# //////
+# Feature improvement: Store username / password in database
 user_db = {
     "user1": generate_password_hash("abc123"),
 }
@@ -24,12 +26,6 @@ def verify_password(username, password):
 @auth.login_required
 def index():
     return jsonify({"message": "Authentication successful!"})
-
-#TODO: Figure out why this doesn't work
-#@auth.error_handler(401)
-#def custom_401():
-#    response = jsonify({username:password})
-#    return response, 401
 
 if __name__ == '__main__':
     app.run()
